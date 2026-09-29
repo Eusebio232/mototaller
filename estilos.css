@@ -89,12 +89,26 @@ body {
 }
 
 /* HERO SECTION */
-.seccion-hero {
+/* .seccion-hero {
     background: linear-gradient(135deg, var(--azul-oscuro) 50%, var(--azul-mecanico));
     color: var(--texto-claro);
     padding: 6rem 2rem;
     text-align: center;
+} */
+/* HERO SECTION CON IMAGEN DE FONDO */
+.seccion-hero {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 50%, rgba(30, 58, 138, 0.85)), 
+                url('principal.png'); /* <- Coloca aquí la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    color: var(--texto-claro);
+    padding: 6rem 2rem;
+    text-align: center;
 }
+
+
 
 .contenido-hero {
     max-width: 800px;
