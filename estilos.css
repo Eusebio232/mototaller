@@ -356,4 +356,9 @@ body {
     .seccion-hero h1 {
         font-size: 2.2rem;
     }
+    .icono-whatsapp {
+        font-size: 2.2rem; /* Hace que el logotipo de WhatsApp se vea grande y centrado */
+        color: #ffffff;
+    }
+
 }
