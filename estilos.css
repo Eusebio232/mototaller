@@ -22,6 +22,20 @@ body {
     line-height: 1.6;
 }
 
+/* BARRA DE HORARIO ACTUALIZADA Y MEJORADA */
+.barra-horario {
+    background-color: #f59e0b !important; /* Fuerza el color amarillo mecánico */
+    color: #0f172a !important;            /* Fuerza el texto oscuro de alto contraste */
+    text-align: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
 /* ENCABEZADO */
 .sitio-header {
     background-color: var(--azul-oscuro);
@@ -83,22 +97,15 @@ body {
 .menu-toggle span {
     width: 100%;
     height: 3px;
-    background-color: #ffffff !important; /* Fuerza el color blanco */
+    background-color: #ffffff !important;
     border-radius: 2px;
     transition: all 0.3s ease-in-out;
 }
 
-/* HERO SECTION */
-/* .seccion-hero {
-    background: linear-gradient(135deg, var(--azul-oscuro) 50%, var(--azul-mecanico));
-    color: var(--texto-claro);
-    padding: 6rem 2rem;
-    text-align: center;
-} */
 /* HERO SECTION CON IMAGEN DE FONDO */
 .seccion-hero {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 50%, rgba(30, 58, 138, 0.85)), 
-                url('principal.png'); /* <- Coloca aquí la ruta de tu imagen */
+                url('principal.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -107,8 +114,6 @@ body {
     padding: 6rem 2rem;
     text-align: center;
 }
-
-
 
 .contenido-hero {
     max-width: 800px;
@@ -247,7 +252,7 @@ body {
     color: var(--azul-oscuro);
 }
 
-/* PIE DE PÁGINA */
+/* PIE DE PÁGINA Y HORARIOS */
 .pie-sitio {
     background-color: var(--azul-oscuro);
     color: var(--texto-claro);
@@ -260,6 +265,19 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 4rem;
+}
+
+.datos-horario h3 {
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+    color: var(--texto-claro);
+    text-transform: uppercase;
+}
+
+.datos-horario p {
+    font-size: 1rem;
+    opacity: 0.85;
+    margin-bottom: 0.6rem;
 }
 
 .bloque-cita {
@@ -290,22 +308,29 @@ body {
     width: 65px;
     height: 65px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     z-index: 999;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none;
 }
 
 .icono-whatsapp {
-    font-size: 1.8rem;
+    width: 35px !important;
+    height: 35px !important;
+    fill: #ffffff !important;
 }
 
 /* COMPORTAMIENTO PARA PANTALLAS CELULARES (< 768px) */
 @media (max-width: 768px) {
+    .barra-horario {
+        font-size: 0.75rem;
+        padding: 0.4rem;
+    }
+
     .menu-toggle {
-        display: flex; /* Muestra las tres rayitas en celulares */
+        display: flex;
     }
 
     .menu-principal {
@@ -336,7 +361,6 @@ body {
         left: 0;
     }
 
-    /* Animación del botón: Convierte las tres líneas en una cruz (X) */
     .menu-toggle.active span:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
     }
@@ -356,9 +380,4 @@ body {
     .seccion-hero h1 {
         font-size: 2.2rem;
     }
-    .icono-whatsapp {
-        font-size: 2.2rem; /* Hace que el logotipo de WhatsApp se vea grande y centrado */
-        color: #ffffff;
-    }
-
 }
